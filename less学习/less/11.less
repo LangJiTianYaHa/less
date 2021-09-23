@@ -1,0 +1,14 @@
+/*
+ 
+   作用域 :  延时加载
+ * */
+
+@var: red;
+
+#page {
+  @var: #111;
+  #header {
+    color: @var; // white
+    @var:#222;
+  }
+}

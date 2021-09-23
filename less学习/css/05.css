@@ -1,0 +1,26 @@
+/*
+ 
+ *  @规则与冒泡
+ * @ 规则（例如 @media 或 @supports）可以与选择器以相同的方式进行嵌套。
+ * @ 规则会被放在前面，同一规则集中的其它元素的相对顺序保持不变。
+ * 这叫做冒泡（bubbling）。
+*/
+/*min-resolution:定义设备的分辨率*/
+.component {
+  width: 300px;
+}
+@media (min-width: 768px) {
+  .component {
+    width: 600px;
+  }
+}
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .component {
+    background-image: url(/img/retina2x.png);
+  }
+}
+@media (min-width: 1280px) {
+  .component {
+    width: 800px;
+  }
+}

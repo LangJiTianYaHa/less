@@ -1,0 +1,19 @@
+/*
+ 
+ *  转义（Escaping） 
+ * */
+
+
+//@min768: ~"(min-width: 768px)";
+//.element {
+//@media @min768 {
+//  font-size: 1.2rem;
+//}
+//}
+
+@min768 : ~"(min-width:768px)";
+.element{
+    @media @min768 {
+        font-size: 1.2rem;
+    }
+}

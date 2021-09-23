@@ -1,0 +1,29 @@
+/*
+ 
+ *   运算（Operation）
+ * 
+ * 算术运算符 +、-、*、/ 可以对任何数字、颜色或变量进行运算
+ * 计算结果以最左侧操作数的单位类型为准
+ * 
+ * 所有操作数被转换成相同的单位
+ * */
+
+
+@conversion-1: 5cm + 10mm; // 结果是 6cm
+@conversion-2: 2 - 3cm - 5mm; // 结果是 -1.5cm
+
+// conversion is impossible
+@incompatible-units: 2 + 5px - 3cm; // 结果是 4px
+
+// example with variables
+@base: 5%;
+@filler: @base * 2; // 结果是 10%
+@other: @base + @filler; // 结果是 15%
+
+@base: 2cm * 3mm; // 结果是 6cm
+
+h2{
+   @color: #224488 / 2; //结果是 #112244
+   background-color: #112244 + #111; // 结果是 #223355
+ 
+}

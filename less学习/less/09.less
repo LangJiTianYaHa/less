@@ -1,0 +1,20 @@
+#bundle() {
+  .button {
+    display: block;
+    border: 1px solid black;
+    background-color: grey;
+    &:hover {
+      background-color: white;
+    }
+  }
+   .tab { background-color: red; }
+   .citation { width: 50px; }
+}
+
+//现在，如果我们希望把 .button 类混合到 #header a 中，我们可以这样做：
+
+#header a {
+  color: orange;
+  //#bundle.button();  // 还可以书写为 #bundle > .button 形式
+  #bundle.button(); 
+}
